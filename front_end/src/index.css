@@ -1,0 +1,17 @@
+:root {
+  --glass-bg: rgba(255, 255, 255, 0.7);
+}
+body {
+  background: linear-gradient(120deg, #eef2ff, #f8fafc);
+  min-height: 100vh;
+}
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}

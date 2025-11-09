@@ -1,0 +1,143 @@
+/* ---------- Layout ---------- */
+.student-dashboard-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #74ebd5, #acb6e5);
+  font-family: "Poppins", sans-serif;
+}
+
+.student-dashboard-title {
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #1a1a40;
+}
+
+/* ---------- Profile Card ---------- */
+.student-profile-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+}
+
+.student-avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid #2575fc;
+}
+
+.student-info h4 {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.student-info p {
+  margin: 3px 0;
+  color: #333;
+}
+
+/* ---------- Buttons ---------- */
+.student-tab-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.student-tab-btn {
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 600;
+  color: #333;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.student-tab-btn:hover {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.student-tab-btn.active {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* ---------- Card ---------- */
+.glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- Table ---------- */
+.student-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+
+.student-table th {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+
+.student-table td {
+  padding: 10px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.student-table tr:hover td {
+  background: #f3f7ff;
+}
+
+/* ---------- Quiz Button ---------- */
+.quiz-start-btn {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 10px;
+  margin-top: 1rem;
+  transition: 0.3s;
+}
+
+.quiz-start-btn:hover {
+  transform: scale(1.03);
+  opacity: 0.9;
+}
+
+/* ---------- Animations ---------- */
+.student-content {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

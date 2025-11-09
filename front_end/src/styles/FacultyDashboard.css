@@ -1,0 +1,361 @@
+/* =========================================================
+   Faculty Dashboard Styles
+   ========================================================= */
+
+/* ---------- Layout ---------- */
+.container-faculty-dashboard {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+  font-family: "Poppins", sans-serif;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ---------- Title ---------- */
+.faculty-dashboard-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a1a40;
+  text-align: center;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+/* ---------- Dashboard Grid ---------- */
+.faculty-dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+}
+
+/* ---------- Card Base Style ---------- */
+.faculty-card,
+.faculty-form-card,
+.faculty-table-card,
+.stats-card {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  transition: all 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.faculty-card:hover,
+.faculty-form-card:hover,
+.faculty-table-card:hover,
+.stats-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- Form Card ---------- */
+.faculty-form-card h5 {
+  font-weight: 600;
+  color: #1a1a40;
+  text-align: center;
+}
+
+.faculty-form-input,
+.faculty-form-card input,
+.faculty-form-card select {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
+}
+
+.question-textarea {
+  width: 90%;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 15px;
+  line-height: 1.6;
+  border: 1.5px solid #d1d5db;
+  background-color: #f9fafb;
+  color: #111827;
+  outline: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease-in-out;
+  resize: vertical;
+  margin-bottom: 15px;
+}
+
+.question-textarea:focus {
+  border-color: #6366f1; /* indigo accent */
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+  background-color: #fff;
+}
+
+.faculty-form-input:focus,
+.faculty-form-card input:focus,
+.faculty-form-card select:focus {
+  border-color: #6a11cb;
+  box-shadow: 0 0 0 0.2rem rgba(106, 17, 203, 0.15);
+  outline: none;
+}
+
+.faculty-submit-btn,
+.faculty-form-card button[type="submit"] {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.faculty-submit-btn:hover,
+.faculty-form-card button[type="submit"]:hover {
+  transform: scale(1.03);
+  background: linear-gradient(135deg, #5b0eb6, #1b63e8);
+}
+
+/* ---------- Table Card ---------- */
+.faculty-table-card h5 {
+  font-weight: 600;
+  color: #1a1a40;
+  text-align: center;
+}
+
+.faculty-table-wrapper {
+  max-height: 380px;
+  overflow-y: auto;
+  border-radius: 12px;
+}
+
+.faculty-table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.faculty-table-wrapper th {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  text-align: center;
+  font-weight: 600;
+  border: none;
+  padding: 0.75rem;
+}
+
+.faculty-table-wrapper td {
+  text-align: center;
+  padding: 0.75rem;
+  background: #fafafa;
+  border-bottom: 1px solid #eee;
+}
+
+.faculty-table-wrapper tr:hover td {
+  background: #f0f7ff;
+}
+
+.faculty-table-wrapper .table-primary th {
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+}
+
+.faculty-table-wrapper .table-info th {
+  background: linear-gradient(135deg, #00b4db, #0083b0);
+}
+
+/* ---------- Stats Card ---------- */
+.stats-card {
+  text-align: center;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  padding: 2rem;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.8rem;
+}
+
+.stats-card h5 {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.stats-card p {
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+@media (min-width: 992px) {
+  .stats-card {
+    flex-direction: column;
+  }
+}
+
+.stats-card:hover {
+  background: linear-gradient(135deg, #5b0eb6, #1b63e8);
+  transform: translateY(-3px);
+}
+
+/* ---------- Student Reports ---------- */
+.faculty-table-card .table-info th {
+  font-size: 1rem;
+  background: linear-gradient(135deg, #00b4db, #0083b0);
+}
+
+.faculty-table-card td {
+  font-size: 0.95rem;
+}
+
+/* ---------- Modal ---------- */
+.modal-content {
+  border-radius: 14px !important;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* ---------- Animations ---------- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.faculty-card,
+.stats-card,
+.faculty-table-card {
+  animation: fadeInUp 0.6s ease-in-out;
+}
+
+/* ---------- Faculty Tile Container (Add Question + Stats) ---------- */
+.container-faculty {
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+}
+
+/* Each card inside */
+.container-faculty > .col,
+.container-faculty > .faculty-form-card {
+  flex: 1 1 380px; /* minimum width 380px, grows responsively */
+  max-width: 400px !important;
+}
+.container-faculty > .col,
+.container-faculty > div {
+  flex: 1 1 380px; /* minimum width 380px, grows responsively */
+  max-width: 800px;
+}
+
+/* Align cards evenly on large screens */
+@media (min-width: 992px) {
+  .container-faculty {
+    justify-content: space-between;
+    align-items: stretch;
+  }
+}
+
+/* Stack vertically on smaller screens */
+@media (max-width: 768px) {
+  .container-faculty {
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-faculty > .col,
+  .container-faculty > div {
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+/* Success Modal Wrapper */
+.modal-content {
+  border-radius: 18px !important;
+  border: none !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  animation: popIn 0.3s ease-in-out;
+}
+
+/* Header */
+.modal-header {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white !important;
+  border-top-left-radius: 18px !important;
+  border-top-right-radius: 18px !important;
+  border-bottom: none !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Title */
+.modal-title {
+  font-weight: 600;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Body */
+.modal-body {
+  font-size: 1rem;
+  color: #333;
+  padding: 20px 25px;
+  text-align: center;
+  background-color: #fff;
+}
+
+/* Footer */
+.modal-footer {
+  border-top: none !important;
+  padding: 15px 25px;
+  background-color: #f9fafb;
+  border-bottom-left-radius: 18px !important;
+  border-bottom-right-radius: 18px !important;
+}
+
+/* Close Button */
+.modal-header .btn-close {
+  filter: brightness(0) invert(1);
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+.modal-header .btn-close:hover {
+  opacity: 1;
+}
+
+/* Secondary Button (Close) */
+.modal-footer .btn-secondary {
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  border: none;
+  color: white;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
+}
+
+.modal-footer .btn-secondary:hover {
+  transform: scale(1.03);
+  opacity: 0.95;
+}
+
+/* Animation */
+@keyframes popIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
