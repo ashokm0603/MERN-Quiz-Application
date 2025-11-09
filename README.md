@@ -83,10 +83,10 @@ npm start
 
 ##  Key Functionalities
 
-### One Attempt per Subject
-### Shuffled Questions
-### Auto Timer Submit
-### Faculty Reports
+#### One Attempt per Subject
+#### Shuffled Questions
+#### Auto Timer Submit
+#### Faculty Reports
 
 ## API Endpoints Overview
 
